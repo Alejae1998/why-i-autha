@@ -28,7 +28,7 @@ export async function signInUser(email, password) {
 }
 
 export async function checkAuth() {
-    if (getUser()) {
+    if (!getUser()) {
         location.replace('/');
     }
 }
